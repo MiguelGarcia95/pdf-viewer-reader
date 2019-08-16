@@ -7,6 +7,20 @@
   <title>Personal PDF Reader</title>
 </head>
 <body>
+  <section class="top-bar">
+    <button class="btn" id='prev-page'>
+      <i class='fas fa-arrow-circle-left'></i> Prev Page
+    </button>
+    <button class="btn" id='next-page'>
+      Next Page <i class='fas fa-arrow-circle-right'></i>
+    </button>
+    <span class="page-info">
+      Page <span id="page-num"></span> of <span id="page-count"></span>
+    </span>
+  </section>
+
+  <canvar id="pdf-render"></canvar>
+  
   <script src="https://kit.fontawesome.com/5f7fe36d22.js"></script>
   <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script> 
   <script src="./js/main.js"></script> 
