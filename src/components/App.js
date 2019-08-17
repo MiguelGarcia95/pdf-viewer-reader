@@ -1,4 +1,5 @@
 import React from 'react';
+import Options from './Options';
 
 const pdfjsLib = window.pdfjsLib
 
@@ -13,15 +14,16 @@ class App extends React.Component {
       pageIsRendering: false,
       pageNumIsPending: null,
       scale: 1.5,
+      error: '',
     }
   }
 
   previousPage = () => {
-    if (this.state.pageNum <= 1) return;
     let {pageNum} = this.state;
+    if (pageNum <= 1) return;
     pageNum--;
 
-    this.setState({pageNum: pageNum});
+    this.setState({pageNum});
     if (this.state.pageIsRendering) {
       this.setState({pageNumIsPending: false});
     } else {
@@ -30,10 +32,11 @@ class App extends React.Component {
   }
 
   nextPage = () => {    
-    if (this.state.pageNum >= this.state.pageCount) return;
     let {pageNum} = this.state;
+    if (pageNum >= this.state.pageCount) return;
     pageNum++;
-    this.setState({pageNum: pageNum});
+
+    this.setState({pageNum});
     if (this.state.pageIsRendering) {
       this.setState({pageNumIsPending: false});
     } else {
@@ -50,7 +53,7 @@ class App extends React.Component {
       })
       this.renderPage(this.state.pageNum)
     } catch (error) {
-      console.log(error);
+      this.setState({error})
     }
   }
 
@@ -83,7 +86,7 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.pageIsRendering); // if true show spinner
+    // if true show spinner
     // add go to page feature
     // add bookmark option
     // update scale?
@@ -91,6 +94,8 @@ class App extends React.Component {
     // change colors?
     return (
       <div className="App">
+        <Options />
+        {this.state.pageIsRendering && <h2>Loading</h2>}
         <section className="top-bar">
           <button className="btn" id='prev-page' onClick={this.previousPage} >
             <i className='fas fa-arrow-circle-left'></i> Prev Page
