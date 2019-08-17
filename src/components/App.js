@@ -89,8 +89,8 @@ class App extends React.Component {
     // if true show spinner
     // add go to page feature
     // add bookmark option
-    // update scale?
     // make it pwa
+    // update scale?
     // change colors?
     return (
       <div className="App">
