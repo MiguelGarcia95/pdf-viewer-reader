@@ -73,39 +73,16 @@ class App extends React.Component {
         viewport: viewport
       }
       
-      page.render(renderCtx).promise.then(() => {
-        // page render false
-        this.setState({pageIsRendering: false});
-        if (this.state.pageNumIsPending !== null) {
-          this.renderPage(this.state.pageNumIsPending);
-          this.setState({pageNumIsPending: null});
-        }
-      })
+      await page.render(renderCtx).promise
+      // page render false
+      this.setState({pageIsRendering: false});
+      if (this.state.pageNumIsPending !== null) {
+        this.renderPage(this.state.pageNumIsPending);
+        this.setState({pageNumIsPending: null});
+      }
     } catch (error) {
       console.log(error)
     }
-
-    // this.state.pdfDoc.getPage(pageNum).then(page => {
-    //   // set scale
-    //   const viewport = page.getViewport({scale: this.state.scale})
-    //   canvas.height = viewport.height;
-    //   canvas.width = viewport.width;
-
-    //   const renderCtx = {
-    //     canvasContext: canvas.getContext('2d'),
-    //     viewport: viewport
-    //   }
-      
-    //   page.render(renderCtx).promise.then(() => {
-    //     // page render false
-    //     this.setState({pageIsRendering: false});
-
-    //     if (this.state.pageNumIsPending !== null) {
-    //       this.renderPage(this.state.pageNumIsPending);
-    //       this.setState({pageNumIsPending: null});
-    //     }
-    //   })
-    // })
   }
 
   render() {
