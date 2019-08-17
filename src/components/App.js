@@ -44,9 +44,9 @@ class App extends React.Component {
     }
   }
 
-  getDocument = async () => {
+  loadPdf = async (url) => {
     try {
-      const pdfDoc = await pdfjsLib.getDocument(this.state.url).promise;
+      const pdfDoc = await pdfjsLib.getDocument(url).promise;
       this.setState({
         pageCount: pdfDoc.numPages,
         pdfDoc: pdfDoc
@@ -85,6 +85,14 @@ class App extends React.Component {
     }
   }
 
+  uploadPdf = e => {
+    e.preventDefault();
+    const file = document.getElementById('uploadedPdf').files[0]
+    const url = URL.createObjectURL(file);
+    this.setState({url});
+    this.loadPdf(url);
+  }
+
   render() {
     // if true show spinner
     // add go to page feature
@@ -94,13 +102,17 @@ class App extends React.Component {
     // change colors?
     return (
       <div className="App">
-        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.getDocument}  />
+        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={() => this.loadPdf(this.state.url)}  />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         <section className="top-bar">
           <span className="page-info">
             Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
           </span>
         </section>
+          <input id='uploadedPdf' type='file' name='file' />
+        <form onSubmit={this.uploadPdf} encType='multipart/form-data'>
+          <button>Submit</button>
+        </form>
         <canvas id="pdf-render"></canvas>
       </div>
     );
