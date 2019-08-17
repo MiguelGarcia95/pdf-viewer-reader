@@ -44,23 +44,23 @@ class App extends React.Component {
     }
   }
 
-  getDocument = () => {
-    pdfjsLib.getDocument(this.state.url).promise.then(pdfDoc => {
-      // console.log(pdfDoc);
+  getDocument = async () => {
+    try {
+      const pdfDoc = await pdfjsLib.getDocument(this.state.url).promise;
       this.setState({
         pageCount: pdfDoc.numPages,
         pdfDoc: pdfDoc
       })
       this.renderPage(this.state.pageNum)
-    })
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   renderPage = async pageNum => {
     const canvas = document.getElementById('pdf-render');
-    // page render true
     this.setState({pageIsRendering: true});
 
-    // get page
     try {
       const page = await this.state.pdfDoc.getPage(pageNum);
       // set scale
@@ -86,6 +86,7 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.pageNumIsPending);
     return (
       <div className="App">
         <section className="top-bar">
