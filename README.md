@@ -1,3 +1,3 @@
-## Person PDF Reader/Viewer [Try Out](#).
+## Personal PDF Reader/Viewer [Try Out](#).
 
 Made with React, and PDF.js
