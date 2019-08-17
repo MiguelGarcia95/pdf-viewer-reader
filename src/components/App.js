@@ -14,10 +14,7 @@ class App extends React.Component {
       pageNumIsPending: null,
       scale: 1.5,
     }
-    this.myCanvas = React.createRef();
   }
-
-  getPdf = () => {console.log(this.myCanvas)}
 
   previousPage = () => {
     if (this.state.pageNum <= 1) return;
@@ -88,8 +85,10 @@ class App extends React.Component {
   render() {
     console.log(this.state.pageIsRendering); // if true show spinner
     // add go to page feature
+    // add bookmark option
+    // update scale?
+    // make it pwa
     // change colors?
-    // add a search bar?
     return (
       <div className="App">
         <section className="top-bar">
@@ -106,7 +105,7 @@ class App extends React.Component {
             Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
           </span>
         </section>
-        <canvas ref={this.myCanvas} id="pdf-render"></canvas>
+        <canvas id="pdf-render"></canvas>
       </div>
     );
   }
