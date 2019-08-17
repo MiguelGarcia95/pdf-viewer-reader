@@ -21,24 +21,26 @@ class App extends React.Component {
 
   previousPage = () => {
     if (this.state.pageNum <= 1) return;
+    let {pageNum} = this.state;
+    pageNum--;
 
-    this.setState({pageNum: this.state.pageNum - 1});
+    this.setState({pageNum: pageNum});
     if (this.state.pageIsRendering) {
       this.setState({pageNumIsPending: false});
     } else {
-      this.renderPage(this.state.pageNum);
+      this.renderPage(pageNum);
     }
   }
 
-  nextPage = () => {
-    
+  nextPage = () => {    
     if (this.state.pageNum >= this.state.pageCount) return;
-
-    this.setState({pageNum: this.state.pageNum + 1});
+    let {pageNum} = this.state;
+    pageNum++;
+    this.setState({pageNum: pageNum});
     if (this.state.pageIsRendering) {
       this.setState({pageNumIsPending: false});
     } else {
-      this.renderPage(this.state.pageNum);
+      this.renderPage(pageNum);
     }
   }
 
@@ -77,8 +79,6 @@ class App extends React.Component {
           this.renderPage(this.state.pageNumIsPending);
           this.setState({pageNumIsPending: null});
         }
-
-
       });
       console.log(page)
     })
