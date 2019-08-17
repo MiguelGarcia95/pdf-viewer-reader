@@ -94,18 +94,9 @@ class App extends React.Component {
     // change colors?
     return (
       <div className="App">
-        <Options />
+        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.getDocument}  />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         <section className="top-bar">
-          <button className="btn" id='prev-page' onClick={this.previousPage} >
-            <i className='fas fa-arrow-circle-left'></i> Prev Page
-          </button>
-          <button className="btn" id='next-page' onClick={this.getDocument} >
-            Load
-          </button>
-          <button className="btn" id='next-page' onClick={this.nextPage} >
-            Next Page <i className='fas fa-arrow-circle-right'></i>
-          </button>
           <span className="page-info">
             Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
           </span>
