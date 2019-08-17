@@ -86,7 +86,10 @@ class App extends React.Component {
   }
 
   render() {
-    console.log(this.state.pageNumIsPending);
+    console.log(this.state.pageIsRendering); // if true show spinner
+    // add go to page feature
+    // change colors?
+    // add a search bar?
     return (
       <div className="App">
         <section className="top-bar">
