@@ -16,7 +16,6 @@ class App extends React.Component {
       pageNumIsPending: null,
       scale: 1.5,
       error: '',
-      theme: 'dark'
     }
   }
 
@@ -107,14 +106,12 @@ class App extends React.Component {
     this.loadPdf(url);
   }
 
-  changeTheme = (theme) => this.setState({theme})
-
   render() {
     // add bookmark option
     // make it pwa
     // change colors?
     return (
-      <div className={`app ${this.state.theme}`}>
+      <div className='app'>
         <Options 
           previousPage={this.previousPage} 
           nextPage={this.nextPage} 
