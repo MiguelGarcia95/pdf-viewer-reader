@@ -1,23 +1,14 @@
-.btn {
-  height: 35px;
-  width: 150px;
-  float: left;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
 .uploadContainer {
   background: transparent;
   position: relative;
 }
 
 .uploadContainer p {
-  margin: auto;
+  margin: 0 auto;
   padding-bottom: 1px;
   line-height: 35px;
   text-align: center;
-  background: green;
+  font-size: 13px;
 }
 
 .uploadContainer #uploadedPdf {

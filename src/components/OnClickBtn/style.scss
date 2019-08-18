@@ -1,0 +1,21 @@
+.btn {
+  height: 35px;
+  width: 150px;
+  float: left;  
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: green !important;
+  color: white; 
+  p{
+    margin: 0 auto;
+    font-size: 1em;
+    font-size: 13px;
+  }
+  &.sm {
+    width: 50px;
+  }
+  &.md {
+    width: 100px;
+  }
+}

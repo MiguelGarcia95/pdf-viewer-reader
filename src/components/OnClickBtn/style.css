@@ -1,0 +1,25 @@
+.btn {
+  height: 35px;
+  width: 150px;
+  float: left;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  background: green !important;
+  color: white;
+}
+
+.btn p {
+  margin: 0 auto;
+  font-size: 1em;
+  font-size: 13px;
+}
+
+.btn.sm {
+  width: 50px;
+}
+
+.btn.md {
+  width: 100px;
+}
+/*# sourceMappingURL=style.css.map */
