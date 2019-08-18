@@ -63,11 +63,9 @@ class App extends React.Component {
 
     try {
       const page = await this.state.pdfDoc.getPage(pageNum);
-      // set scale
       const viewport = page.getViewport({scale: this.state.scale})
       canvas.height = viewport.height;
       canvas.width = viewport.width;
-
       const renderCtx = {
         canvasContext: canvas.getContext('2d'),
         viewport: viewport
@@ -102,9 +100,11 @@ class App extends React.Component {
       <div className="App">
         <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.loadPdf} url={this.state.url} uploadPdf={this.uploadPdf} />
         {this.state.pageIsRendering && <h2>Loading</h2>}
-        <section className="pages">
-          Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
-        </section>
+        {this.state.pdfDoc && (
+          <section className="pages">
+            Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
+          </section>
+        )}
         <canvas id="pdf-render"></canvas>
       </div>
     );
