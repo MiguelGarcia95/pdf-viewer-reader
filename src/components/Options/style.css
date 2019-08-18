@@ -1,3 +1,13 @@
+.options-bar {
+  width: 100%;
+}
+
+.options-bar .container {
+  margin: auto;
+  width: 650px;
+  height: 100%;
+}
+
 .uploadContainer {
   background: transparent;
   position: relative;
