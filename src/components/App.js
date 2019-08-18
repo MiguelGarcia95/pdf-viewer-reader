@@ -7,7 +7,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      url: 'sample/sample.pdf',
+      url: '',
       pdfDoc: null,
       pageNum: 1,
       pageCount: '',
@@ -85,8 +85,7 @@ class App extends React.Component {
     }
   }
 
-  uploadPdf = e => {
-    e.preventDefault();
+  uploadPdf = () => {
     const file = document.getElementById('uploadedPdf').files[0]
     const url = URL.createObjectURL(file);
     this.setState({url});
@@ -94,7 +93,6 @@ class App extends React.Component {
   }
 
   render() {
-    // if true show spinner
     // add go to page feature
     // add bookmark option
     // make it pwa
@@ -102,17 +100,13 @@ class App extends React.Component {
     // change colors?
     return (
       <div className="App">
-        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={() => this.loadPdf(this.state.url)}  />
+        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.loadPdf} url={this.state.url} uploadPdf={this.uploadPdf} />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         <section className="top-bar">
           <span className="page-info">
             Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
           </span>
         </section>
-          <input id='uploadedPdf' type='file' name='file' />
-        <form onSubmit={this.uploadPdf} encType='multipart/form-data'>
-          <button>Submit</button>
-        </form>
         <canvas id="pdf-render"></canvas>
       </div>
     );

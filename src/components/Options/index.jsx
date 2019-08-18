@@ -1,7 +1,7 @@
 import React from 'react'
 import './style.css';
 
-function Options({previousPage, nextPage, loadPdf}) {
+function Options({previousPage, nextPage, loadPdf, url, uploadPdf}) {
   // add go to page feature
   // update scale?
   // change colors?
@@ -19,8 +19,14 @@ function Options({previousPage, nextPage, loadPdf}) {
       <button className='btn' id='bookmark'>
         Bookmark <i className="fas fa-bookmark"></i>
       </button>
-      <button className="btn" id='next-page' onClick={() => loadPdf()} >
-        Load <i className='fas fas fa-hdd'></i>
+      <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf()} />
+      {url && (
+        <button className="btn" id='next-page' onClick={() => loadPdf()} >
+          Load <i className='fas fas fa-hdd'></i>
+        </button>
+      )}
+      <button className="btn" id='next-page' onClick={() => loadPdf('sample/sample.pdf')} >
+        Load Sample PDF <i className='fas fas fa-file-pdf'></i>
       </button>
     </section>
   )
