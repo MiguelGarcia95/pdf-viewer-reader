@@ -6,6 +6,12 @@
   background: #232323;
   color: white;
   .container {
+    &.close {
+      width: 200px;
+    }
+    &.open {
+
+    }
     margin: auto;
     width: 600px;
     height: 100%;

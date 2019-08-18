@@ -5,7 +5,7 @@ import './style.css';
 function Options({previousPage, nextPage, loadPdf, uploadPdf, onPageSubmit, zoomPage, scale, pdfDoc}) {
   return (
     <section className='options-bar'>
-      <section className="container">
+      <section className={`container ${pdfDoc ? 'open' : 'close'}`}>
         {pdfDoc ? (
           <React.Fragment>
             <OnClickBtn className='btn sm' onBtnClick={() => zoomPage(scale + 0.1)} btnIcon='fas fa-search-plus' />
@@ -14,9 +14,12 @@ function Options({previousPage, nextPage, loadPdf, uploadPdf, onPageSubmit, zoom
             <OnClickBtn className='btn sm' onBtnClick={() => previousPage()} btnIcon='fas fa-chevron-circle-left' />
             <OnClickBtn className='btn sm' onBtnClick={() => nextPage()} btnIcon='fas fa-chevron-circle-right' />
             <OnClickBtn className='btn sm' onBtnClick={() => console.log('save bookmark')} btnIcon='fas fa-bookmark' />
-            <section className="uploadContainer btn md">
+            <section className="uploadContainer btn">
               <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf()} />
-              <p> Upload Anothe File<i className="fas fa-file-upload"></i></p>
+              <p> Upload Anothe File <i className="fas fa-file-upload"></i></p>
+            </section>
+            <section className='btn btn-pg-search md'>
+              <input placeholder='Go To Page' onKeyDown={onPageSubmit} />
             </section>
           </React.Fragment>
         ) : (
