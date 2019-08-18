@@ -109,7 +109,6 @@ class App extends React.Component {
   render() {
     // add bookmark option
     // make it pwa
-    // change colors?
     return (
       <div className='app'>
         <Options 
@@ -120,6 +119,7 @@ class App extends React.Component {
           onPageSubmit={this.onPageSubmit} 
           zoomPage={this.zoomPage}
           scale={this.state.scale}
+          pdfDoc={this.state.pdfDoc}
         />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         {this.state.pdfDoc && (
