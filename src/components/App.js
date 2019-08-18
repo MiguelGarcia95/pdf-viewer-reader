@@ -120,6 +120,7 @@ class App extends React.Component {
           uploadPdf={this.uploadPdf} 
           onPageSubmit={this.onPageSubmit} 
           zoomPage={this.zoomPage}
+          scale={this.state.scale}
         />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         {this.state.pdfDoc && (
