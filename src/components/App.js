@@ -67,6 +67,11 @@ class App extends React.Component {
     }
   }
 
+  zoomInOrOut = (scale) => {
+    this.setState({scale});
+    this.renderPage(this.state.pageNum);
+  }
+
   renderPage = async pageNum => {
     const canvas = document.getElementById('pdf-render');
     this.setState({pageIsRendering: true});
