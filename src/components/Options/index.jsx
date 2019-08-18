@@ -2,7 +2,7 @@ import React from 'react';
 import OnClickBtn from '../OnClickBtn';
 import './style.css';
 
-function Options({previousPage, nextPage, loadPdf, url, uploadPdf}) {
+function Options({previousPage, nextPage, loadPdf, url, uploadPdf, onPageSubmit}) {
   // add go to page feature
   // update scale?
   // change colors?
@@ -14,6 +14,9 @@ function Options({previousPage, nextPage, loadPdf, url, uploadPdf}) {
       <section className="uploadContainer btn">
         <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf()} />
         <p> Upload PDF <i className="fas fa-file-upload"></i></p>
+      </section>
+      <section className='btn md'>
+        <input placeholder='Go To Page' onKeyDown={onPageSubmit} />
       </section>
       <OnClickBtn className='btn' onBtnClick={() => loadPdf('sample/sample.pdf')} btnText='Load Sample PDF' btnIcon='fas fa-file-pdf' />
     </section>

@@ -57,6 +57,16 @@ class App extends React.Component {
     }
   }
 
+  onPageSubmit = e => {
+    let newPage = Number(e.target.value);
+    if (e.keyCode === 13 && newPage) {
+      if (newPage >= 1 && newPage <= this.state.pageCount) {
+        this.renderPage(newPage);
+        this.setState({pageNum: newPage});
+      }
+    }
+  }
+
   renderPage = async pageNum => {
     const canvas = document.getElementById('pdf-render');
     this.setState({pageIsRendering: true});
@@ -98,7 +108,7 @@ class App extends React.Component {
     // change colors?
     return (
       <div className="App">
-        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.loadPdf} url={this.state.url} uploadPdf={this.uploadPdf} />
+        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.loadPdf} url={this.state.url} uploadPdf={this.uploadPdf} onPageSubmit={this.onPageSubmit} />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         {this.state.pdfDoc && (
           <section className="pages">
