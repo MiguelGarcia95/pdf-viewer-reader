@@ -5,8 +5,7 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  background: green !important;
-  color: white; 
+  background-color: transparent;
   p{
     margin: 0 auto;
     font-size: 1em;
@@ -23,11 +22,10 @@
       width: 100%;
       margin: 0;
       border: 0;
-      height: 20px;
+      height: 35px;
       padding: 0 5px;
       text-align: center;
       box-sizing: border-box;
-      margin-top: 7.5px;
     }
   }
 }
