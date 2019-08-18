@@ -1,1 +1,15 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.container, #uploadedPdf {
+  height: 47px;
+  width: 263px;
+}
+
+#uploadedPdf {
+  opacity: 0;
+  position: absolute;
+}
+
+.container {
+  background: transparent;
+  position: relative;
+}
+/*# sourceMappingURL=style.css.map */
