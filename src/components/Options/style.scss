@@ -1,9 +1,23 @@
+.dark {
+  .options-bar {
+    background: #232323;
+    color: white;
+  }
+}
+
+.light {
+  .options-bar {
+    background: white;
+    color: #232323;
+  }
+}
+
 .options-bar {
   width: 100%;
   height: 35px;
   box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.1);
   position: fixed;
-  background: white;
+  
 
   .container {
     margin: auto;

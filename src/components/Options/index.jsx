@@ -3,14 +3,12 @@ import OnClickBtn from '../OnClickBtn';
 import './style.css';
 
 function Options({previousPage, nextPage, loadPdf, uploadPdf, onPageSubmit, zoomPage, scale}) {
-  // add go to page feature
-  // update scale?
   // change colors?
   return (
     <section className='options-bar'>
       <section className="container">
         <OnClickBtn className='btn sm' onBtnClick={() => zoomPage(scale + 0.1)} btnIcon='fas fa-lg fa-search-plus' />
-        <OnClickBtn className='btn sm' onBtnClick={() => zoomPage(1)} btnIcon='fas fa-lg fa-search' />
+        <OnClickBtn className='btn sm' onBtnClick={() => zoomPage(1.5)} btnIcon='fas fa-lg fa-search' />
         <OnClickBtn className='btn sm' onBtnClick={() => zoomPage(scale - 0.1)} btnIcon='fas fa-lg fa-search-minus' />
         <OnClickBtn className='btn sm' onBtnClick={() => previousPage()} btnIcon='fas fa-lg fa-chevron-circle-left' />
         <OnClickBtn className='btn sm' onBtnClick={() => nextPage()} btnIcon='fas fa-lg fa-chevron-circle-right' />

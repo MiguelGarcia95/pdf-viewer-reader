@@ -1,3 +1,16 @@
+.dark {
+  .btn, .btn-pg-search input {
+    background: #232323;
+    color: white;
+  }
+}
+
+.light {
+  .btn, .btn-pg-search input {
+    background: white;
+    color: #232323;
+  }
+}
 .btn {
   height: 35px;
   width: 150px;
