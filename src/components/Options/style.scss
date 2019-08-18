@@ -2,6 +2,9 @@
   height: 35px;
   width: 150px;
   float: left;  
+  border: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .uploadContainer {
@@ -9,6 +12,7 @@
   position: relative;
   p {
     margin: auto;
+    padding-bottom: 1px;
     line-height: 35px;
     text-align: center;
     background: green;
@@ -17,6 +21,7 @@
     cursor: pointer;
     width: 150px;
     height: 35px;
+    left: 0; top: 0;
     opacity: 0;
     position: absolute;
   }
