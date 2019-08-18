@@ -19,6 +19,38 @@
   color: white;
 }
 
+.btn :focus {
+  outline: none;
+}
+
+.btn ::-webkit-input-placeholder {
+  color: #c8c8c8;
+  opacity: 1;
+}
+
+.btn :-ms-input-placeholder {
+  color: #c8c8c8;
+  opacity: 1;
+}
+
+.btn ::-ms-input-placeholder {
+  color: #c8c8c8;
+  opacity: 1;
+}
+
+.btn ::placeholder {
+  color: #c8c8c8;
+  opacity: 1;
+}
+
+.btn :-ms-input-placeholder {
+  color: #c8c8c8;
+}
+
+.btn ::-ms-input-placeholder {
+  color: #c8c8c8;
+}
+
 .btn p {
   margin: 0 auto;
   font-size: 1em;
@@ -42,5 +74,7 @@
   text-align: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  background: transparent;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

@@ -21,6 +21,10 @@
   cursor: pointer;
   background-color: transparent;
   color: white;
+  :focus{outline: none;}
+  ::placeholder {color: rgb(200,200,200); opacity: 1;}
+  :-ms-input-placeholder {color: rgb(200,200,200);}
+  ::-ms-input-placeholder {color: rgb(200,200,200);}
   p{
     margin: 0 auto;
     font-size: 1em;
@@ -41,6 +45,8 @@
       padding: 0 5px;
       text-align: center;
       box-sizing: border-box;
+      background: transparent;
+      color: white;
     }
   }
 }
