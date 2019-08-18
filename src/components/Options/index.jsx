@@ -13,13 +13,10 @@ function Options({previousPage, nextPage, loadPdf, url, uploadPdf}) {
       <button className="btn" id='prev-page' onClick={() => nextPage()} >
         Next Page <i className='fas fa-chevron-circle-right'></i>
       </button>
-      {/* <button className='btn' id='upload-doc'>
-        Upload PDF <i className="fas fa-file-upload"></i>
-      </button> */}
       <button className='btn' id='bookmark'>
         Bookmark <i className="fas fa-bookmark"></i>
       </button>
-      <section className="container">
+      <section className="uploadContainer btn">
         <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf()} />
         <p> Upload PDF <i className="fas fa-file-upload"></i></p>
       </section>

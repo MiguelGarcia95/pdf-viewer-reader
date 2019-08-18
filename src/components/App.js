@@ -102,10 +102,8 @@ class App extends React.Component {
       <div className="App">
         <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.loadPdf} url={this.state.url} uploadPdf={this.uploadPdf} />
         {this.state.pageIsRendering && <h2>Loading</h2>}
-        <section className="top-bar">
-          <span className="page-info">
-            Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
-          </span>
+        <section className="pages">
+          Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
         </section>
         <canvas id="pdf-render"></canvas>
       </div>

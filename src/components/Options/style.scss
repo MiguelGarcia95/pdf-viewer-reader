@@ -1,18 +1,24 @@
-.container, #uploadedPdf {
-  height: 47px;
-  width: 263px;
+.btn {
+  height: 35px;
+  width: 150px;
+  float: left;  
 }
 
-#uploadedPdf {
-  opacity: 0;
-  position: absolute;
-}
-
-.container {
+.uploadContainer {
   background: transparent;
-  ::after{
-    // content: 'Upload'
-  }
   position: relative;
+  p {
+    margin: auto;
+    line-height: 35px;
+    text-align: center;
+    background: green;
+  }
+  #uploadedPdf {
+    cursor: pointer;
+    width: 150px;
+    height: 35px;
+    opacity: 0;
+    position: absolute;
+  }
 }
 
