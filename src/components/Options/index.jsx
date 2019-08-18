@@ -15,7 +15,7 @@ function Options({previousPage, nextPage, loadPdf, uploadPdf, onPageSubmit, zoom
         <OnClickBtn className='btn sm' onBtnClick={() => previousPage()} btnIcon='fas fa-lg fa-chevron-circle-left' />
         <OnClickBtn className='btn sm' onBtnClick={() => nextPage()} btnIcon='fas fa-lg fa-chevron-circle-right' />
         <OnClickBtn className='btn sm' onBtnClick={() => console.log('save bookmark')} btnIcon='fas fa-bookmark' />
-        <section className="uploadContainer btn">
+        <section className="uploadContainer btn md">
           <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf()} />
           <p> Upload <i className="fas fa-file-upload"></i></p>
         </section>
