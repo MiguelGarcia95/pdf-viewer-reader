@@ -67,7 +67,7 @@ class App extends React.Component {
     }
   }
 
-  zoomInOrOut = (scale) => {
+  zoomPage = (scale) => {
     this.setState({scale});
     this.renderPage(this.state.pageNum);
   }
@@ -113,7 +113,14 @@ class App extends React.Component {
     // change colors?
     return (
       <div className="App">
-        <Options previousPage={this.previousPage} nextPage={this.nextPage} loadPdf={this.loadPdf} url={this.state.url} uploadPdf={this.uploadPdf} onPageSubmit={this.onPageSubmit} />
+        <Options 
+          previousPage={this.previousPage} 
+          nextPage={this.nextPage} 
+          loadPdf={this.loadPdf} 
+          uploadPdf={this.uploadPdf} 
+          onPageSubmit={this.onPageSubmit} 
+          zoomPage={this.zoomPage}
+        />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         {this.state.pdfDoc && (
           <section className="pages">
