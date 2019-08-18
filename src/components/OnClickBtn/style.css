@@ -18,6 +18,14 @@
   background-color: transparent;
 }
 
+.btn.dark {
+  color: white;
+}
+
+.btn.light {
+  color: #232323;
+}
+
 .btn p {
   margin: 0 auto;
   font-size: 1em;
@@ -25,7 +33,7 @@
 }
 
 .btn.sm {
-  width: 50px;
+  width: 40px;
 }
 
 .btn.md {

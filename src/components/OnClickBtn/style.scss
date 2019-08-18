@@ -11,6 +11,7 @@
     color: #232323;
   }
 }
+
 .btn {
   height: 35px;
   width: 150px;
@@ -19,13 +20,19 @@
   padding: 0;
   cursor: pointer;
   background-color: transparent;
+  &.dark {
+    color: white;
+  }
+  &.light {
+    color: #232323;
+  }
   p{
     margin: 0 auto;
     font-size: 1em;
     font-size: 13px;
   }
   &.sm {
-    width: 50px;
+    width: 40px;
   }
   &.md {
     width: 100px;
