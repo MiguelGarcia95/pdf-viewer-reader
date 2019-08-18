@@ -1,5 +1,6 @@
 import React from 'react';
 import Options from './Options';
+import './styles/style.css';
 
 const pdfjsLib = window.pdfjsLib
 
@@ -112,7 +113,7 @@ class App extends React.Component {
     // update scale?
     // change colors?
     return (
-      <div className="App">
+      <div className="app">
         <Options 
           previousPage={this.previousPage} 
           nextPage={this.nextPage} 
@@ -124,9 +125,9 @@ class App extends React.Component {
         />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         {this.state.pdfDoc && (
-          <section className="pages">
-            Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span>
-          </section>
+        <section className="pages">
+          <p>Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span></p>
+        </section>
         )}
         <canvas id="pdf-render"></canvas>
       </div>

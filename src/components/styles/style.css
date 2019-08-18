@@ -1,1 +1,19 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+.app {
+  text-align: center;
+}
+
+.pages {
+  position: fixed;
+  left: 0px;
+  bottom: 0;
+  background: white;
+  z-index: 99;
+  padding: 0 5px;
+}
+
+.pages p {
+  margin: auto;
+  line-height: 35px;
+  height: 35px;
+}
+/*# sourceMappingURL=style.css.map */
