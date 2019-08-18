@@ -123,9 +123,9 @@ class App extends React.Component {
         />
         {this.state.pageIsRendering && <h2>Loading</h2>}
         {this.state.pdfDoc && (
-        <section className="pages">
-          <p>Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span></p>
-        </section>
+          <section className="pages">
+            <p>Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span></p>
+          </section>
         )}
         <canvas id="pdf-render"></canvas>
       </div>

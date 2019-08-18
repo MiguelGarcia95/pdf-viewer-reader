@@ -10,9 +10,12 @@
   position: fixed;
   left: 0px;
   bottom: 0;
-  background: white;
   z-index: 99;
   padding: 0 5px;
+  width: 100px;
+  height: 35px;
+  background: #232323;
+  color: white;
 }
 
 .pages p {
