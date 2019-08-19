@@ -17,7 +17,7 @@
       padding-bottom: 1px;
       line-height: 100px;
       text-align: center;
-      font-size: 13px;
+      font-size: 20px;
       cursor: pointer;
     }
     &.upload {
@@ -38,4 +38,17 @@
       margin-top: 10px;
     }
   } 
+}
+
+@media (max-width: 350px) {
+  .welcome {
+    &.open {
+      width: 100%;
+      padding: 0 20px; 
+      box-sizing: border-box;
+      p {
+        font-size: 15px; 
+      }
+    }
+  }
 }

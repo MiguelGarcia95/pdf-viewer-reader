@@ -24,7 +24,7 @@
   padding-bottom: 1px;
   line-height: 100px;
   text-align: center;
-  font-size: 13px;
+  font-size: 20px;
   cursor: pointer;
 }
 
@@ -47,5 +47,17 @@
 
 .welcome .welcome-btn.load {
   margin-top: 10px;
+}
+
+@media (max-width: 350px) {
+  .welcome.open {
+    width: 100%;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .welcome.open p {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
