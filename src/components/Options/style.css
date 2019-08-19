@@ -43,4 +43,19 @@
   opacity: 0;
   position: absolute;
 }
+
+@media (max-width: 650px) {
+  .options-bar {
+    height: 70px;
+  }
+  .options-bar .container {
+    height: 50%;
+  }
+  .options-bar .container.open {
+    width: 300px;
+  }
+  .options-bar .container .uploadContainer {
+    width: 50%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

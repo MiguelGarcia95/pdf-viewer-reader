@@ -77,4 +77,10 @@
   background: transparent;
   color: white;
 }
+
+@media (max-width: 650px) {
+  .btn.btn-pg-search {
+    width: 50%;
+  }
+}
 /*# sourceMappingURL=style.css.map */

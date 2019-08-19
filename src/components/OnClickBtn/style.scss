@@ -51,27 +51,8 @@
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 650px) {
   .btn {
-    // height: 35px;
-    // width: 150px;
-    p{
-      // margin: 0 auto;
-      // font-size: 1em;
-      // font-size: 13px;
-    }
-    &.sm {
-      // width: 50px;
-    }
-    &.md {
-      // width: 100px;
-    }
-    &.btn-pg-search {
-      input {
-        // width: 100%;
-        // height: 35px;
-        // padding: 0 5px;
-      }
-    }
+    &.btn-pg-search {width: 50%;}
   }
 }
