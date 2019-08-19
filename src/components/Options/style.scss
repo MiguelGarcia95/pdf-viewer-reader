@@ -37,5 +37,16 @@
 }
 
 @media (max-width: 550px) {
-  
+  .options-bar {
+    .container {
+      &.close {
+        // width: 200px;
+      }
+      &.open {
+        // width: 550px;
+      }
+      // margin: auto;
+      // height: 100%;
+    }
+  }
 }
