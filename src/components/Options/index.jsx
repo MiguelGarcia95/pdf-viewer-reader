@@ -4,7 +4,7 @@ import './style.css';
 
 function Options({previousPage, nextPage, loadPdf, uploadPdf, onPageSubmit, zoomPage, scale, pdfDoc}) {
   return (
-    <section className='options-bar'>
+    <section className={`options-bar ${pdfDoc ? 'open' : 'close'}`}>
       <section className={`container ${pdfDoc ? 'open' : 'close'}`}>
         {pdfDoc ? (
           <React.Fragment>

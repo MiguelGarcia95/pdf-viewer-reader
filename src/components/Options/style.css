@@ -45,11 +45,8 @@
 }
 
 @media (max-width: 650px) {
-  .options-bar {
+  .options-bar.open {
     height: 70px;
-  }
-  .options-bar .container {
-    height: 50%;
   }
   .options-bar .container.open {
     width: 300px;
