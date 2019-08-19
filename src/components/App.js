@@ -100,8 +100,9 @@ class App extends React.Component {
     }
   }
 
-  uploadPdf = () => {
-    const file = document.getElementById('uploadedPdf').files[0]
+  uploadPdf = element => {
+    console.log(element)
+    const file = document.getElementById(element).files[0]
     const url = URL.createObjectURL(file);
     this.setState({url});
     this.loadPdf(url);

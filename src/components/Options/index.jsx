@@ -15,7 +15,7 @@ function Options({previousPage, nextPage, loadPdf, uploadPdf, onPageSubmit, zoom
             <OnClickBtn className='btn sm' onBtnClick={() => nextPage()} btnIcon='fas fa-chevron-circle-right' />
             <OnClickBtn className='btn sm' onBtnClick={() => console.log('save bookmark')} btnIcon='fas fa-bookmark' />
             <section className="uploadContainer btn">
-              <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf()} />
+              <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf('uploadedPdf')} />
               <p> Upload Anothe File <i className="fas fa-file-upload"></i></p>
             </section>
             <section className='btn btn-pg-search md'>
@@ -26,7 +26,7 @@ function Options({previousPage, nextPage, loadPdf, uploadPdf, onPageSubmit, zoom
           <React.Fragment>
             <OnClickBtn className='btn md' onBtnClick={() => loadPdf('sample/sample.pdf')} btnText='Sample PDF' btnIcon='fas fa-file-pdf' />
             <section className="uploadContainer btn md">
-              <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf()} />
+              <input id='uploadedPdf' type='file' name='file' onChange={() => uploadPdf('uploadedPdf')} />
               <p> Upload <i className="fas fa-file-upload"></i></p>
             </section>
           </React.Fragment>

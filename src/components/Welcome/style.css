@@ -1,6 +1,6 @@
 .welcome {
-  width: 200px;
-  height: 200px;
+  width: 0px;
+  height: 220px;
   margin: auto;
   left: 0;
   right: 0;
@@ -9,8 +9,14 @@
   position: absolute;
 }
 
+.welcome.open {
+  width: 300px;
+}
+
 .welcome .welcome-btn {
   height: 100px;
+  background: #232323;
+  color: white;
 }
 
 .welcome .welcome-btn p {
@@ -19,14 +25,17 @@
   line-height: 100px;
   text-align: center;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .welcome .welcome-btn.upload {
   background: transparent;
+  margin-bottom: 10px;
+  background: #232323;
   position: relative;
 }
 
-.welcome .welcome-btn.upload #uploadedPdf {
+.welcome .welcome-btn.upload #uploadedPdfw {
   cursor: pointer;
   width: 100%;
   height: 100px;
@@ -34,5 +43,9 @@
   top: 0;
   opacity: 0;
   position: absolute;
+}
+
+.welcome .welcome-btn.load {
+  margin-top: 10px;
 }
 /*# sourceMappingURL=style.css.map */
