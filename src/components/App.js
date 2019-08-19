@@ -1,5 +1,6 @@
 import React from 'react';
 import Options from './Options';
+import Welcome from './Welcome';
 import './styles/style.css';
 
 const pdfjsLib = window.pdfjsLib
@@ -122,10 +123,12 @@ class App extends React.Component {
           pdfDoc={this.state.pdfDoc}
         />
         {this.state.pageIsRendering && <h2>Loading</h2>}
-        {this.state.pdfDoc && (
+        {this.state.pdfDoc ? (
           <section className="pages">
             <p>Page <span id="page-num">{this.state.pageNum}</span> of <span id="page-count">{this.state.pageCount}</span></p>
           </section>
+        ) : (
+          <Welcome pdfDoc={this.state.pdfDoc} loadPdf={this.loadPdf} uploadPdf={this.uploadPdf} />
         )}
         <canvas id="pdf-render"></canvas>
       </div>
