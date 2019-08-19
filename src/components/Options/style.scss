@@ -6,12 +6,8 @@
   background: #232323;
   color: white;
   .container {
-    &.close {
-      width: 200px;
-    }
-    &.open {
-      width: 550px;
-    }
+    &.close {width: 200px;}
+    &.open {width: 550px;}
     margin: auto;
     height: 100%;
   }
@@ -38,12 +34,9 @@
 
 @media (max-width: 650px) {
   .options-bar {
-    &.open {
-      height: 70px;
-    }
+    &.open {height: 70px;}
     .container {
       &.open {width: 300px;}
-      // height: 50%;
       .uploadContainer {width: 50%;}
     }
   }
